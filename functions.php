@@ -6,7 +6,15 @@ function add_files() {
 }
 
 function theme_setup() {
+    //タイトルタグ
     add_theme_support('title-tag');
+
+    //メニュー
+    register_nav_menus(
+        array(
+            'main-menu' => 'メインメニュー'
+        )
+    );
 }
 
 add_action('wp_enqueue_scripts', 'add_files');
